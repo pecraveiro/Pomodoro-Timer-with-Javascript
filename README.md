@@ -1,4 +1,4 @@
-<div align"center">
+<div align="center">
 <h1>Pomodoro Timer with World of Warcraft Sounds</h1>
   </div>
     

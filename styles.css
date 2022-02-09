@@ -1,5 +1,6 @@
 html {
-  box-sizing: border-box;
+  box-sizing: border-box; 
+  cursor: url('world-of-warcraft-cursor.png'), pointer; /* Cursor do Mouse do World of Warcraft*/
 }
 
 *, *::before, *::after {

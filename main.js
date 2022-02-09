@@ -5,6 +5,18 @@ const timer = {
     longBreakInterval: 4
 };
 
+let interval;
+
+const mainButton = document.getElementById('js-btn'); // Adding the Button
+mainButton.addEventListener('click', () => {
+    const { action } = mainButton.dataset;
+    if (action == 'start') {
+        startTimer();
+    } else {
+        stopTimer();
+      }
+});
+
 const modeButtons = document.querySelector("#js-mode-buttons");
 modeButtons.addEventListener('click', handleMode);
 
@@ -14,6 +26,7 @@ function handleMode(event){
     if(!mode) return;
 
     switchMode(mode);
+    stopTimer();
 }
 
 function switchMode(mode) {
@@ -33,6 +46,48 @@ function switchMode(mode) {
     updateClock(); // Update Clock Function
 }
 
+function getRemainingTime(endTime) {
+    const currentTime = Date.parse(new Date());
+    const difference = endTime - currentTime;
+
+    const total = Number.parseInt(difference / 1000, 10);
+    const minutes = Number.parseInt((total / 60) % 60, 10);
+    const seconds = Number.parseInt(total % 60, 10);
+
+    return {
+        total,
+        minutes,
+        seconds,
+    };
+}
+
+function startTimer() {
+    let { total } = timer.remainingTime;
+    const endTime = Date.parse(new Date()) + total * 1000;
+
+    mainButton.dataset.action = 'stop';
+    mainButto.textContent = 'stop';
+    mainButton.classList.add('active');
+
+    interval = setInterval(function(){
+        timer.remainingTime = getRemainingTime(endTime);
+        updateClock();
+        
+        total = timer.remaining.total;
+        if (total <= 0) {
+            clearInterval(interval);
+        }
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(interval);
+
+    mainButton.dataset.action = 'start';
+    mainButton.textContent = 'start';
+    mainButton.classList.remove('active');
+}
+
 function updateClock(){ // Update Clock Function
     const  { remainingTime } = timer;
     const minutes = `${remainingTime.minutes}`.padStart(2, '0');
@@ -44,3 +99,7 @@ function updateClock(){ // Update Clock Function
     min.textContent = minutes;
     sec.textContent = seconds;    
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    switchMode('pomodoro');
+});

@@ -1,5 +1,8 @@
 <div align="center">
 <h1>Pomodoro Timer with World of Warcraft Sounds</h1>
+  
+  ![2022-02-09-02-08-14-_online-video-cutter com_](https://user-images.githubusercontent.com/79882049/153126602-fb2ac126-f401-46fa-b2ab-a2d1d990a723.gif)
+  
   </div>
     
 ## 🔍 Índice

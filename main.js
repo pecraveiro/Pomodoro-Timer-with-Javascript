@@ -43,6 +43,9 @@ function switchMode(mode) {
       .forEach(e => e.classList.remove('active'));
     document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
     document.body.style.backgroundColor = `var(--${mode})`;
+    document
+    .getElementById('js-progress')
+    .setAttribute('max', timer.remainingTime.total);
   
     updateClock();
   }
@@ -91,7 +94,8 @@ function startTimer() {
                 default:
                   switchMode('pomodoro');
               }
-        
+              document.querySelector(`[data-sound="${timer.mode}"]`).play();
+
               startTimer();    
         }
     }, 1000);
@@ -114,6 +118,12 @@ function updateClock() { // Update Clock Function
     const sec = document.getElementById('js-seconds');
     min.textContent = minutes;
     sec.textContent = seconds;
+
+    const text = timer.mode === 'pomodoro' ? 'Pedro get back to work!' : 'Pedro take a break!';
+    document.title = `${minutes}:${seconds} | ${text}`;
+
+    const progress = document.getElementById('js-progress');
+    progress.value = timer[timer.mode] * 60 - timer.remainingTime.total;
   }
 
 document.addEventListener('DOMContentLoaded', () => {

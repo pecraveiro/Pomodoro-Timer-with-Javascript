@@ -1,5 +1,5 @@
 <div align"center">
-<h1 align"center">Pomodoro Timer with World of Warcraft Sounds</h1>
+<h1>Pomodoro Timer with World of Warcraft Sounds</h1>
   </div>
     
 ## 🔍 Índice

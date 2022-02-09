@@ -19,6 +19,8 @@ O projeto **Pomodoro Timer with World of Warcraft Sounds** é uma aplicação pa
 
 ## 📚 Guia completo:
 
-- Baseado nesse [passo a passo](https://freshman.tech/pomodoro-timer/) bem detalhado.
+- Baseado nesse [passo a passo](https://freshman.tech/pomodoro-timer/) bem detalhado;
+- [Cursor](https://www.cursors-4u.com/world_of_warcraft/);
+- World of Warcrafts [Sounds](https://www.wowhead.com/sounds) Database.
 
 <p align="center">Desenvolvido por <a href ="https://www.linkedin.com/in/pecraveiro/">Pedro Craveiro</a> 🌐:octocat:</p>

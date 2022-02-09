@@ -1,6 +1,8 @@
 <div align="center">
 <h1>Pomodoro Timer with World of Warcraft Sounds</h1>
   
+  ![githubpomodoro](https://user-images.githubusercontent.com/79882049/153127292-6914f88e-f6c0-4846-89c0-737561725ef0.PNG)
+  
   ![gifgifgif](https://user-images.githubusercontent.com/79882049/153126986-ee3c3bec-4a68-49da-9b2f-4b3f09017ef5.gif)
   
   </div>

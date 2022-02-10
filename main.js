@@ -1,7 +1,7 @@
 const timer = {
   pomodoro: 25, // 25min doing the work/task that you need
   shortBreak: 5, // 5min break, if you change this you can increased or decreased the amount of time of your break
-  longBreak: 15, // 5min break, if you change this you can increased or decreased the amount of time of your break
+  longBreak: 15, // 15min break, if you change this you can increased or decreased the amount of time of your break
   longBreakInterval: 4,
   sessions: 0,
 };

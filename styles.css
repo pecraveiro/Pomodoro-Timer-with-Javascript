@@ -31,7 +31,7 @@ progress {
 }
 
 progress::-webkit-progress-bar {
- background-color: rgba(0, 0, 0, 0.1);;
+ background-color: rgba(0, 0, 0, 0.1);
 }
 
 progress::-webkit-progress-value {

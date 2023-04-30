@@ -48,7 +48,7 @@ function startTimer() {
   mainButton.textContent = 'stop';
   mainButton.classList.add('active');
 
-  interval = setInterval(function() {
+  interval = setInterval(function () {
     timer.remainingTime = getRemainingTime(endTime);
     updateClock();
 
